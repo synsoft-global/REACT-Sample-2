@@ -1,0 +1,32 @@
+@import "variables.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@media print {
+    body {
+        background-color: $white !important;
+    }
+
+    .App {
+        &.dark-app {
+            background-color: $white !important;
+            color: $dark-color !important;
+        }
+
+        .SideBar {
+            &.nav {
+                display: none;
+            }
+        }
+
+        .TopBar {
+            &.navbar {
+                display: none;
+            }
+        }
+
+        .MainContent {
+            margin-left: 0;
+            padding-top: 0;
+        }
+    }
+}

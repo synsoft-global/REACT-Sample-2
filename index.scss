@@ -1,0 +1,80 @@
+@import "theme.scss";
+
+html, body{
+    height: 100% !important;
+    font-size: 14px !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $dark_bg;
+    font-size: 14px !important;
+
+    .abs {
+        position: absolute;
+
+        &.top-10 { top: 10px; }
+        &.top-20 { top: 20px; }
+        &.right-10 { right: 10px; }
+        &.right-20 { right: 20px; }
+    }
+
+    #root {
+        height: 100%;
+        .loadingMessage {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .alert {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: auto;
+
+            &.alert-danger {
+                &:before {
+                    font-family: FontAwesome;
+                    content: "\f071";
+                    padding-right: 10px;
+                }
+            }
+        }
+        .jumbotron {
+            background: #232323;
+            padding: 15px;
+        }
+        /* Fix semantic-ui side-effects */
+        h1, h2, h3, h4, h5 {
+            font-family: Helvetica,Arial,sans-serif;
+        }
+        .form-control {
+            height: auto;
+        }
+        .ui.default.dropdown:not(.button)>.text,
+        .ui.dropdown:not(.button)>.default.text {
+            color: inherit;
+        }
+        .btn-sm, .btn-group-sm > .btn {
+            font-size: 14px;
+        }
+        .col-top-align {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .col-center-align {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .col-bottom-align {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+}
